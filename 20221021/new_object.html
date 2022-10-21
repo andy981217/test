@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2.객체 생성자 방식
+        //객체=속성+메소드(함수)
+        function Pet(name,age,type) {
+            //속성 만드는중     
+            this.name=name //this: 현재 있는 객체를 가르킨다.
+            this.age=age
+            this.type=type
+            //메소드
+            this.eat= function (food) {
+                console.log(`${this.name}가 ${food}를 먹습니다.`);
+            }
+            this.old=function (age) {
+                console.log(`${this.name}의 나이는 ${this.age}입니다.`);
+            }
+            this.catType=function (type) {
+                console.log(`고양이 ${this.name}(이)의 종류는  ${this.type}입니다.`);
+            }
+        }
+        //객체 생성 
+        //객체를 쓰는 이유? 코드의 생산성이 높아진다. 
+        //객체가 생성되는 순간 속성에 값이 할당된다. 
+        //객체 안에 있는 걸 가져다 쓸 수 있다. 
+        const pet=new Pet("구름",5,'노르웨이숲고양이');
+        const pet2=new Pet("별",10,'먼치킨');
+        const pet3=new Pet("달",7,'브리티시쇼트헤어');
+        const pet4 =new Pet("해",9,'러시안블루');
+        // console.log(pet.name);
+        pet.eat('밥')
+        pet.old()
+        pet.catType()
+
+        pet2.eat('밥')
+        pet2.old()
+        pet2.catType()
+
+
+        pet3.eat('밥')
+        pet3.old()
+        pet3.catType()
+
+        pet4.eat('밥')
+        pet4.old()
+        pet4.catType()
+
+        
+        // console.log(pet2.name);
+        // console.log(pet3.name);
+        // console.log(pet4.name);
+
+
+    </script>
+</body>
+</html>
