@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- class 기본 -->
+</head>
+<body>
+    <script>
+        //속성 + 메소드 
+        class Pet{
+            //constructor: 생성자 함수 
+            constructor(nameVal, ageVal,catVal){
+                this.name=nameVal
+                this.age=ageVal
+                this.cat=catVal
+            }
+            
+            eat(food){
+                console.log(`${this.name}이가 ${food}을(를) 먹습니다.`);
+            }
+            age2(year){
+                console.log(`${this.name}의 나이는 ${year} 입니다.`);
+            } 
+            type(zong){
+                console.log(`${this.name}의 종류는 ${zong} 입니다.`);
+            }
+        
+        }
+
+        const pet= new Pet('구름',7,'코숏')
+        console.log(pet.name);
+        console.log(pet.age);
+        console.log(pet.cat);
+        pet.eat('개껌')
+        pet.age2('8')
+        pet.type("시츄")
+    </script>
+    
+</body>
+</html>

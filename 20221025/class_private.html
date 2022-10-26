@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Square{
+            #length //this.length를 private로 사용하겠다고 정의 
+
+            constructor(length){
+                this.length=length
+            }
+            
+            get length(){
+                return this.#length
+            }
+
+            set length(length){
+                this.#length=length
+            }
+            get getPerimeter(){
+                return 4*this.#length
+            }
+            get getArea(){
+                return this.#length*this.length
+            }
+
+
+            getPerimeter(){
+                return 4*this.#length
+            }
+            getArea(){
+                return this.#length*this.#length
+            }
+        }
+
+        
+        const square=new Square(10)
+        square.length=10
+        console.log(`length:${square.length}`);
+        console.log(`getPerimeter():${square.getPerimeter()}`);
+        console.log(`getArea():${square.getArea()}`);
+    </script>
+</body>
+</html>

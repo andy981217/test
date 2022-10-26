@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        첫 번째 div
+        <span>테스트입니다.</span>
+    </div>
+    <script>
+        const header=document.createElement('h1')
+        console.log(header);
+        document.body.appendChild(header)
+        const box=document.querySelector('.box')
+        const span=document.querySelector('span')
+        box.appendChild(header)
+        //-> 윗 문장을 통해서 script안에 있던 문장이 div로 들어가게 된다.
+        box.removeChild(span)
+    </script>
+    
+</body>
+</html>
